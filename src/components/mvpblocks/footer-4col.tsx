@@ -81,7 +81,7 @@ const contactInfo = [
     icon: MapPin,
     text: data.contact.address,
     isAddress: true,
-    href: "#",
+    href: "https://www.google.com/maps/place/ESPA%C3%87O+DEMOSTENES+TEIXEIRA+-+Av.+Duque+de+Caxias,+1291+-+sala+101+-+Fazendinha,+Itapipoca+-+CE,+62502-348/@-3.4994034,-39.5865631,17z/data=!3m1!4b1!4m6!3m5!1s0x7c048c16346aaab:0x8f10c0ab4f692f89!8m2!3d-3.4994034!4d-39.5865631!16s%2Fg%2F11s16pxkl3?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D",
     type: "address",
   },
 ];
@@ -96,7 +96,7 @@ export default function Footer4Col() {
               <img
                 src={"/logo-genius.png"}
                 alt="logo"
-                className="h-15 w-25 rounded-full object-cover"
+                className="h-15 w-25  object-cover"
               />
               <span className="text-2xl font-semibold">
                 {data.company.name}
@@ -164,6 +164,7 @@ export default function Footer4Col() {
                   ({ icon: Icon, text, isAddress, href, type }) => (
                     <li key={text}>
                       <a
+                      target="_blank"
                         className="flex items-center justify-center gap-1.5 sm:justify-start"
                         href={href}
                       >
