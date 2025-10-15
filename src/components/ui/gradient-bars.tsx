@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import { useMemo } from 'react';
 
 interface GradientBarsProps {
   bars?: number;
@@ -11,11 +12,16 @@ export const GradientBars = ({
   bars = 20,
   colors = ['#0000ff', 'transparent'],
 }: GradientBarsProps) => {
-  const gradientStyle = `linear-gradient(to top, ${colors.join(', ')})`;
+  // Memoriza o estilo do gradiente para evitar recomputações
+  const gradientStyle = useMemo(() => `linear-gradient(to top, ${colors.join(', ')})`, [colors]);
+
+  // Cria o array de barras uma única vez
+  const barsArray = useMemo(() => Array.from({ length: bars }), [bars]);
+
   return (
     <div className="absolute inset-0 z-0 overflow-hidden">
       <div className="flex h-full w-full">
-        {Array.from({ length: bars }).map((_, index) => {
+        {barsArray.map((_, index) => {
           const position = index / (bars - 1);
           const center = 0.5;
           const distance = Math.abs(position - center);

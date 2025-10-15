@@ -28,11 +28,7 @@ const data = {
     handbook: "/employee-handbook",
     careers: "/careers",
   },
-  help: {
-    faqs: "/faqs",
-    support: "/support",
-    livechat: "/live-chat",
-  },
+
   contact: {
     email: "leandroas2407@hotmail.com",
     phone: "(88)9617-8334",
@@ -56,9 +52,9 @@ const socialLinks = [
 
 const aboutLinks = [
   { text: "Sobre", href: data.about.history },
-  { text: "Meet the Team", href: data.about.team },
-  { text: "Employee Handbook", href: data.about.handbook },
-  { text: "Careers", href: data.about.careers },
+  { text: "Comentarios", href: data.about.team },
+  { text: "Equipe", href: data.about.handbook },
+  { text: "", href: data.about.careers },
 ];
 
 const serviceLinks = [
@@ -66,12 +62,6 @@ const serviceLinks = [
   // { text: 'Suporte', href: data.services.webdesign },
   { text: "Manutenção", href: data.services.marketing },
   // { text: 'Google Ads', href: data.services.googleads },
-];
-
-const helpfulLinks = [
-  { text: "FAQs", href: data.help.faqs },
-  { text: "Support", href: data.help.support },
-  { text: "Live Chat", href: data.help.livechat, hasIndicator: true },
 ];
 
 const contactInfo = [
@@ -104,7 +94,7 @@ export default function Footer4Col() {
           <div>
             <div className="text-primary flex justify-center  gap-2 sm:justify-start">
               <img
-                src={ "/logo-genius.png"}
+                src={"/logo-genius.png"}
                 alt="logo"
                 className="h-15 w-25 rounded-full object-cover"
               />
@@ -121,7 +111,7 @@ export default function Footer4Col() {
               {socialLinks.map(({ icon: Icon, label, href }) => (
                 <li key={label}>
                   <Link
-                  target="_blank"
+                    target="_blank"
                     prefetch={false}
                     href={href}
                     className="text-primary hover:text-primary/80 transition target:blank"
@@ -168,35 +158,7 @@ export default function Footer4Col() {
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Helpful Links</p>
-              <ul className="mt-8 space-y-4 text-sm">
-                {helpfulLinks.map(({ text, href, hasIndicator }) => (
-                  <li key={text}>
-                    <a
-                      href={href}
-                      className={`${
-                        hasIndicator
-                          ? "group flex justify-center gap-1.5 sm:justify-start"
-                          : "text-secondary-foreground/70 transition"
-                      }`}
-                    >
-                      <span className="text-secondary-foreground/70 transition">
-                        {text}
-                      </span>
-                      {hasIndicator && (
-                        <span className="relative flex size-2">
-                          <span className="bg-primary absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" />
-                          <span className="bg-primary relative inline-flex size-2 rounded-full" />
-                        </span>
-                      )}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Contact Us</p>
+              <p className="text-lg font-medium">Conecte-se conosco</p>
               <ul className="mt-8 space-y-4 text-sm">
                 {contactInfo.map(
                   ({ icon: Icon, text, isAddress, href, type }) => (

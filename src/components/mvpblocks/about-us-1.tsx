@@ -84,7 +84,7 @@ export default function AboutUs1() {
   const valuesInView = useInView(valuesRef, { once: true, amount: 0.3 });
 
   return (
-    <section id="sobre" className="relative w-full overflow-hidden pt-20">
+    <section id="sobre" className="relative w-full overflow-hidden">
 <Spotlight
         gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(240, 100%, 50%, 0.08) 0, hsla(240, 100%, 50%, 0.04) 50%, hsla(240, 100%, 45%, 0) 80%)"
         gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(240, 100%, 85%, 0.08) 0, hsla(240, 100%, 50%, 0.04) 80%, transparent 100%)"
