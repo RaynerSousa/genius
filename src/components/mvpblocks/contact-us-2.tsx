@@ -61,8 +61,8 @@ export default function ContactUs2() {
               id="name"
               type="text"
               required
-              className="flex h-10 w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm shadow-inner shadow-slate-800 outline-none hover:border-slate-600 hover:transition-all hover:outline-none focus:border-slate-500 focus:outline-none"
-              placeholder="Enter your name"
+              className="hover:transition-al bg-background placeholder:text-muted-foreground flex h-10 w-full rounded-md border border-slate-700 px-3 py-2 text-sm text-black shadow-inner shadow-slate-800 outline-none file:text-sm file:font-medium hover:border-slate-400 hover:outline-none focus:border-slate-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+              placeholder="Digite seu nome"
               name="name"
             />
           </div>
@@ -71,9 +71,9 @@ export default function ContactUs2() {
             <label htmlFor="email" /> Email
             <input
               id="email"
-              placeholder="Enter your email"
+              placeholder="Digite seu e-mail"
               type="email"
-              className="hover:transition-al bg-background placeholder:text-muted-foreground flex h-10 w-full rounded-md border border-slate-700 px-3 py-2 text-sm shadow-inner shadow-slate-800 outline-none file:text-sm file:font-medium hover:border-slate-400 hover:outline-none focus:border-slate-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+              className="hover:transition-al bg-background placeholder:text-muted-foreground flex h-10 w-full rounded-md border border-slate-700 px-3 py-2 text-sm text-black shadow-inner shadow-slate-800 outline-none file:text-sm file:font-medium hover:border-slate-400 hover:outline-none focus:border-slate-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               name="email"
               required
             />
@@ -85,9 +85,9 @@ export default function ContactUs2() {
             <label htmlFor="message" className="text-lg" />
             Menssagem
             <textarea
-              className="bg-background ring-offset-background placeholder:text-muted-foreground mb-5 flex min-h-[100px] w-full rounded-md border border-slate-700 px-3 py-2 text-sm text-white shadow-inner shadow-slate-800 outline-none hover:border-slate-400 hover:transition-all hover:outline-none focus:border-slate-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+              className="bg-background ring-offset-background placeholder:text-muted-foreground mb-5 flex min-h-[100px] w-full rounded-md border border-slate-700 px-3 py-2 text-sm text-black shadow-inner shadow-slate-800 outline-none hover:border-slate-400 hover:transition-all hover:outline-none focus:border-slate-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               id="message"
-              placeholder="Enter your message"
+              placeholder="Digite sua mensagem"
               name="message"
             />
             {state.errors && (state.errors as any).message && (
@@ -101,7 +101,7 @@ export default function ContactUs2() {
             type="submit"
             disabled={state.submitting}
           >
-            {state.submitting ? 'Sending...' : 'Send'}
+            {state.submitting ? 'Enviando...' : 'Enviar'}
             <Send className="mx-2 inline h-4" />
           </button>
         </form>
@@ -112,8 +112,9 @@ export default function ContactUs2() {
           <div className="mb-12 flex gap-8">
             <Link
               prefetch={false}
+              target='_blank'
               className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-600 shadow-inner shadow-gray-800 hover:shadow-md hover:shadow-slate-500 hover:transition hover:duration-300 hover:ease-in-out"
-              href="#"
+              href="mailto:leandroas2407@hotmail.com"
             >
               <Mail className="h-5 w-5 text-white" />
             </Link>
@@ -126,8 +127,9 @@ export default function ContactUs2() {
           <div className="mb-12 flex gap-8">
             <Link
               prefetch={false}
+              target='_blank'
               className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-600 shadow-inner shadow-gray-800 hover:shadow-md hover:shadow-slate-500 hover:transition hover:duration-300 hover:ease-in-out"
-              href="#"
+              href="https://wa.me/558896178334"
             >
               <Phone className="h-5 w-5 text-white" />
             </Link>
@@ -140,8 +142,10 @@ export default function ContactUs2() {
           <div className="mb-12 flex gap-8">
             <Link
               prefetch={false}
+              target='_blank'
               className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-600 px-2 shadow-inner shadow-gray-800 hover:shadow-md hover:shadow-slate-500 hover:transition hover:duration-300 hover:ease-in-out"
-              href="#"
+              href="https://www.google.com/maps/search/?api=1&query=Avenida Duque de Caxias,+1291,+SALA
+          101,+Fazendinha,+Itapipoca,+CE"
             >
               <MapPin className="h-5 w-5 text-white" />
             </Link>
@@ -149,38 +153,6 @@ export default function ContactUs2() {
               <p>Localização em </p>
               <p>Avenida Duque de Caxias, 1291, SALA 101,Fazendinha,Itapipoca/CE</p>
             </div>
-          </div>
-
-          <div className="flex space-x-12 py-7">
-            {/* <Link
-              prefetch={false}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-600 bg-gray-800 hover:shadow-md hover:shadow-slate-500 hover:transition hover:duration-300 hover:ease-in-out"
-              href="#"
-            >
-              <Twitter className="h-5 w-5 text-white" />
-            </Link> */}
-            {/* <Link
-              prefetch={false}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-600 bg-gray-800 hover:shadow-md hover:shadow-slate-500 hover:transition hover:duration-300 hover:ease-in-out"
-              href="#"
-            >
-              <Facebook className="h-5 w-5 text-white" />
-            </Link> */}
-            {/* <Link
-              prefetch={false}
-              target='_blank'
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 bg-gray-800 hover:shadow-md hover:shadow-slate-500 hover:transition hover:duration-300 hover:ease-in-out"
-              href="https://www.instagram.com/geniusitapipoca/"
-            >
-              <Instagram className="h-5 w-5 text-white" />
-            </Link> */}
-            {/* <Link
-              prefetch={false}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 bg-gray-800 hover:shadow-md hover:shadow-slate-500 hover:transition hover:duration-300 hover:ease-in-out"
-              href=""
-            >
-              <Github className="h-5 w-5 text-white" />
-            </Link> */}
           </div>
         </div>
       </div>
