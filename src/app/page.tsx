@@ -6,6 +6,7 @@ import Funcionarios from "./Sessão/funcionarios";
 import Comentario from "./Sessão/Comentarios";
 import Sobre from "./Sessão/Sobre";
 import Contato from "./Sessão/contato";
+import { WhatsAppButton } from "./Sessão/inicio";
 export default function Home() {
   return (
     <div>
@@ -16,6 +17,7 @@ export default function Home() {
       <Funcionarios />
       <Contato />
       <Footer4Col />
+      <WhatsAppButton />  
     </div>
      );
 }
