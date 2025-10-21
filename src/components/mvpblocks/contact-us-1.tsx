@@ -5,10 +5,16 @@ import { motion, useInView } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import Earth from "@/components/ui/globe";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { Label } from "@/components/ui/label";
 import { Check, Loader2 } from "lucide-react";
+import dynamic from "next/dynamic";
+
+// Lazy loading dos componentes pesados
+const Earth = dynamic(() => import("@/components/ui/globe"), { ssr: false });
+const SparklesCore = dynamic(
+  () => import("@/components/ui/sparkles").then((mod) => mod.SparklesCore),
+  { ssr: false }
+);
 
 export default function ContactUs1() {
   const [name, setName] = useState("");
@@ -25,16 +31,13 @@ export default function ContactUs1() {
     setIsSubmitting(true);
 
     try {
-      // Perform form submission logic here
       console.log("Form submitted:", { name, email, message });
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setName("");
       setEmail("");
       setMessage("");
       setIsSubmitted(true);
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
+      setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
     } finally {
@@ -44,6 +47,7 @@ export default function ContactUs1() {
 
   return (
     <section className="bg-gradient-to-b from-[#0b1224] to-[#0b1224]/5 relative w-full overflow-hidden py-16 md:py-24">
+      {/* Gradientes de fundo */}
       <div
         className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full opacity-20 blur-[120px]"
         style={{
@@ -75,6 +79,7 @@ export default function ContactUs1() {
                 <span className="text-primary relative z-10 w-full text-4xl font-bold tracking-tight italic md:text-5xl">
                   nos
                 </span>
+
                 <SparklesCore
                   id="tsparticles"
                   background="transparent"
@@ -86,17 +91,18 @@ export default function ContactUs1() {
                 />
               </motion.div>
 
+              {/* Botão WhatsApp */}
               <a
                 href="https://wa.me/558896178334"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Contato via WhatsApp"
-                className="flex  flex-col justify-center items-center "
+                className="flex flex-col justify-center items-center"
               >
-                <div className=" text-white shadow-lg flex flex-row-reverse">
+                <div className="text-white shadow-lg flex flex-row-reverse">
                   <div className="bg-[#013585] hover:bg-indigo-900 rounded-4xl w-80 h-70 mt-15 flex items-center justify-center flex-col">
-                    {/* Ícone WhatsApp SVG */}
                     <p className="pb-6 text-4xl">Click me!</p>
+                    {/* SVG WhatsApp */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="80"
@@ -111,6 +117,7 @@ export default function ContactUs1() {
               </a>
             </div>
 
+            {/* Globo 3D */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
@@ -123,7 +130,6 @@ export default function ContactUs1() {
                   <div className="absolute -right-20 -bottom-20 z-10 mx-auto flex h-full w-full max-w-[300px] items-center justify-center transition-all duration-700 hover:scale-105 md:-right-28 md:-bottom-28 md:max-w-[550px]">
                     <Earth
                       scale={1.1}
-                      // baseColor={[1, 0, 0.3]}
                       markerColor={[1, 0, 0.33]}
                       glowColor={[0.1, 0.3, 1]}
                     />
