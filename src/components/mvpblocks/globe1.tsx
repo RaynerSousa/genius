@@ -12,8 +12,8 @@ export default function Globe1() {
             {/* Normalized RGB values i.e (RGB or color / 255) */}
             <Earth
               // baseColor={[1, 0, 0.3]}
-              markerColor={[1, 0, 0.33]}
-              // glowColor={[1, 0, 0.3]}
+               markerColor={[1, 0, 0.33]}
+              glowColor={[0.1, 0.3, 1]}
             />
           </div>
         </article>

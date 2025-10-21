@@ -25,11 +25,11 @@ const defaultMembers: TeamMember[] = [
     {
     name: 'Felipe Sales',
     role: 'Contador',
-    imageUrl: '/felipe.png',
-    socialLinks: [
-      { platform: 'github', url: 'https://github.com' },
-      { platform: 'linkedin', url: 'https://linkedin.com' },
-    ],
+    imageUrl: '/felipe.webp',
+    // socialLinks: [
+    //   { platform: 'github', url: 'https://github.com' },
+    //   { platform: 'linkedin', url: 'https://linkedin.com' },
+    // ],
   },
   {
     name: 'Robert Brown',
