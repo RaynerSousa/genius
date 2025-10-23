@@ -20,7 +20,7 @@ export default function Home() {
       </Suspense>
 
       <Suspense fallback={<div className="text-center py-10">Carregando Comentários...</div>}>
-        <Comentario />
+        <Comentario />  
       </Suspense>
 
       <Suspense fallback={<div className="text-center py-10">Carregando Funcionários...</div>}>
