@@ -68,11 +68,11 @@ const defaultValues: AboutUsProps["values"] = [
 export default function AboutUs1() {
   const aboutData = {
     title: "Sobre Nós",
-    subtitle: "Contruimos aplicaçeoe para a atunomia de sua empresa",
+    subtitle: "Contruimos aplicações para a autunomia de sua empresa",
     mission:
-      "Our mission is to democratize web development by providing high-quality, customizable components that help developers build stunning websites quickly and efficiently.",
+      "Nossa missão é transformar a gestão de negócios por meio de tecnologia inteligente e acessível, oferecendo soluções de automação que aumentam a eficiência, reduzem custos e impulsionam o crescimento das empresas.",
     vision:
-      "We envision a world where creating beautiful websites is accessible to everyone, regardless of their design or development experience.",
+      "Nossa visão é ser referência em inovação tecnológica, tornando a automação comercial simples, poderosa e essencial para o sucesso de qualquer negócio.",
     values: defaultValues,
     className: "relative overflow-hidden py-20",
   };
@@ -85,7 +85,7 @@ export default function AboutUs1() {
 
   return (
     <section id="sobre" className="relative w-full overflow-hidden">
-<Spotlight
+      <Spotlight
         gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(240, 100%, 50%, 0.08) 0, hsla(240, 100%, 50%, 0.04) 50%, hsla(240, 100%, 45%, 0) 80%)"
         gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(240, 100%, 85%, 0.08) 0, hsla(240, 100%, 50%, 0.04) 80%, transparent 100%)"
         gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(240, 100%, 85%, 0.06) 0, hsla(240, 100%, 85%, 0.06) 80%, transparent 100%)"
