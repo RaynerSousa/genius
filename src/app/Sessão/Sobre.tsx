@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
+// import AboutUs2 from "@/components/mvpblocks/about-us-2";
 
 // Lazy load do AboutUs1
 const AboutUs1 = dynamic(
